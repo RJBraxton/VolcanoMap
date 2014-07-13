@@ -1,4 +1,6 @@
 'use strict';
+/* global d3 */
+/* global topojson */
 
 /**
  * @ngdoc overview
@@ -30,4 +32,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  });
+  })
+  .run([function (rootScope) {
+
+  }]);
