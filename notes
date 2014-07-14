@@ -1,0 +1,33 @@
+Okay, so we get our volcanoes and know where they are
+And we're getting our earthquake feeds and know where those are
+Now how do we mark the ones in danger?
+
+Let's say we do a 30 mile radius. APPROXIMATELY (longitude is different) 0.5 degrees each way
+1) Query earthquakes
+2) Go through each one, and if it's within 0.5 lon/lat of a volcano, mark it somehow
+	a) Sort all volcanoes into categories based on their lat/long values
+	b) When starting an earthquake, do an if(), and then only check for proximity in that group, by using another if statement
+	bb) If eq lat is within 0.5 of volcano lat, then check if eq lon is within 0.5, then mark it
+
+---------------------------------------------------------------------
+
+KEY FOR THE VOLCANO INFO
+Under info is this:
+	1= Category
+	3= Event
+	5 = Response Type
+	7 = Urgency
+	9 = Severity
+	11 = Certainty
+	[13] = The Name nonsense
+	[15] = New Activity?
+	[17] = Observatory Name (primary)
+	[19] = Observatory URL
+	[21] = Observatory NAme (Secondary)
+	[23] = Observatory URL
+	25 = Sender Name 
+	27 = Headline (Contains date and stuff)
+	29 = Description
+	31 = Description URL (I think this is always the Smithsonian weekly report)
+	33 = Source (And observatory)
+	35 = Area and GPS coords
