@@ -3,9 +3,13 @@
 describe('Service: xmlParse', function () {
 
   // load the service's module
-  beforeEach(module('volcanoMapApp'));
+  beforeEach(function() {
+    module('volcanoMapApp');
+  });
 
   // instantiate service
+  
+
   var xmlParse;
   beforeEach(inject(function (_xmlParse_) {
     xmlParse = _xmlParse_;

@@ -82,8 +82,7 @@
 
         d3.xml('./geodata/WeeklyVolcanoCAP.xml', function(xml){
                 
-            console.log(xmlParse.getVolcanoName(xml, 1));
-            $scope.one = xmlParse.getVolcanoName(xml);
+            console.log(xmlParse.getLocation(xml, 0));
         }); //d3.xml
     }; //$scope.volcanoWerk
 
