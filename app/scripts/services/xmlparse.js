@@ -19,6 +19,9 @@ angular.module('volcanoMapApp')
       someMethod: function () {
         return meaningOfLife;
       },
+      getVolcanoCount: function(xml){
+        return xml.documentElement.getElementsByTagName('info').length;
+      },
       getVolcanoName: function(xml, num){
         return xml.documentElement.getElementsByTagName('info')[num].childNodes[13].getElementsByTagName('value')[0].innerHTML;
       },
