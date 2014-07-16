@@ -22,7 +22,7 @@ Headline - "Volcano Report for ____ from this time frame"
 Description - Juicy description of the actual eruption
 Source - Info source
 Country - What country is it in?
-Coors - [Lat, Long]
+Coors - [Long, Lat]
 VolcanoNum - The number the Smithsonian has on file for this volcano. Used to link back to their website.
 Volcano Type - Strato, Shield, Compound, etc
 Last Eruption - When did this last erupt?

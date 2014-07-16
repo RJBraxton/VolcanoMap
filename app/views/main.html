@@ -3,7 +3,10 @@
     <div class="col-lg-2 well text-center">
       INFO, yeah
       <p>
-      This is where we can put some test variables. {{volcanoesReported[0]}} - {{two}} - {{three}}
+        <button ng-click="plot()"> PLOT </button>
+      </p>
+      <p ng-repeat="d in volcanoesReported">
+      {{d.name}}, {{d.country}}
       </p>
     </div>
     <div class="col-lg-10  well text-center">

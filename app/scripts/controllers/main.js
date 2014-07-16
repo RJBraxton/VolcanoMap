@@ -55,8 +55,6 @@
       }); //d3.json
     }; //$scope.map
 
-    //$scope.map();
-
   $scope.volcanoPrep = function(){
     $scope.volcanoesReported = [];
     d3.csv('./geodata/volcano_list.csv', function(csv){
@@ -77,7 +75,7 @@
                 description: xmlParse.getDescription(xml, i),
                 sources: xmlParse.getSources(xml, i),
                 country: xmlParse.getLocation(xml, i)[0],
-                coors: [xmlParse.getLocation(xml, i)[1], xmlParse.getLocation(xml, i)[2]],
+                coors: [xmlParse.getLocation(xml, i)[2], xmlParse.getLocation(xml, i)[1]],
                 volcanoNum: csv[j]['Volcano Number'],
                 volcanoType: csv[j]['Primary Volcano Type'],
                 lastEruption: csv[j]['Last Eruption Year'],
@@ -87,40 +85,44 @@
                 populationRanges: [csv[j]['Population within 5 km'], csv[j]['Population within 10 km'], csv[j]['Population within 30 km'], csv[j]['Population within 100 km']]
               }); 
               break;
-            }
-          }
+            } //if loop
+          } //for loop j
           
-      } //for loop
-      $scope.$apply(); //
-      console.log($scope.volcanoesReported[10].name);
+      } //for loop i
+
+      $scope.$apply();
       }); //d3.xml
 
       
-      //This is the mapping, we're gonna come back later and put in the loop
 
-
-       /*var quakes = d3.select('#world').append('g')
-      .attr('class', 'quakes') 
-      .selectAll('.quake')
-      .data(d)
-      .enter().append('g')
-      .attr('class', 'quake')
-      .attr('transform', function() {return 'translate(' +  $scope.projection([d[5].Longitude, d[5].Latitude])[0] + ',' +  $scope.projection([d[5].Longitude, d[5].Latitude])[1] + ')';});
-
-
-
-      quakes.append('circle')
-      .attr('class','quakeStatic')
-      .attr('r', 25)
-      .style('color', 'red')          
-      .style('stroke', 'red')          
-      .style('stroke-width', 1.45);*/
 
      }); //d3.csv
-
-
   }; //$scope.volcanoPrep
 
+$scope.plot = function(){
+
+
+  var quakes = d3.select('#world').append('g')
+  .attr('class', 'quakes')
+  .selectAll('.quake')
+  .data($scope.volcanoesReported)
+  .enter().append('g')
+  .attr('class', 'quake')
+  .attr('transform', function(d) {return 'translate(' + $scope.projection(d.coors)[0] + ',' + $scope.projection(d.coors)[1] + ')';});
+
+  quakes.append('circle')
+  .attr('class','quakeStatic')
+  .attr('r', 10)
+  .style('stroke', 'red')          
+  .style('stroke-width', 1.45);
+
+};
+
+
+
+
+  $scope.map();
   $scope.volcanoPrep();
-    
+
+
   });
