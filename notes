@@ -12,22 +12,21 @@ Let's say we do a 30 mile radius. APPROXIMATELY (longitude is different) 0.5 deg
 ---------------------------------------------------------------------
 
 KEY FOR THE VOLCANO INFO
-Under info is this:
-	1= Category
-	3= Event
-	x5 = Response Type
-	x7 = Urgency
-	9 = Severity
-	x11 = Certainty
-	x[13] = The Name nonsense 
-	x[15] = New Activity?
-	x[17] = Observatory Name (primary)
-	x[19] = Observatory URL
-	x[21] = Observatory NAme (Secondary)
-	x[23] = Observatory URL
-	25 = Sender Name (Always (?) Smithsonian Global Volcanism Program)
-	x27 = Headline (Contains date and stuff)
-	x29 = Description
-	31 = Description URL (I think this is always the Smithsonian weekly report)
-	x33 = Source (And observatory)
-	x35 = Area and GPS coords
+Name - The name of the volcano
+Urgency - Usually Unknown
+Certainty - Has it been observed and confirmed or not?
+Activity - Is this new or ongoing activity?
+Primary Observatory - [Observatory, website]
+Secondary Observatory - [Observatory, website]
+Headline - "Volcano Report for ____ from this time frame"
+Description - Juicy description of the actual eruption
+Source - Info source
+Country - What country is it in?
+Coors - [Lat, Long]
+VolcanoNum - The number the Smithsonian has on file for this volcano. Used to link back to their website.
+Volcano Type - Strato, Shield, Compound, etc
+Last Eruption - When did this last erupt?
+Elevation - Volcano elevation
+Major Rock Types - An array of 5 names of the rock types. NOT ALL ARE ACTUAL USABLE STRINGS
+Minor Rock Types - An array of 5 names of the rock types. NOT ALL ARE ACTUAL USABLE STRINGS
+Population Ranges - Approx people within 5, 10, 30, and 100km of volcano

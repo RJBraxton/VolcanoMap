@@ -16,7 +16,7 @@
  	'Karma'
  	];
 
-  $scope.volcanoesReported = [];
+  
 
  	$scope.map = function(){
 
@@ -57,32 +57,49 @@
 
     //$scope.map();
 
-  $scope.volcanoPregame = function(){
+  $scope.volcanoPrep = function(){
+    $scope.volcanoesReported = [];
+    d3.csv('./geodata/volcano_list.csv', function(csv){
     d3.xml('./geodata/WeeklyVolcanoCAP.xml', function(xml){
-      for (var i=0; i < xmlParse.getVolcanoCount(xml); i++)
-      {
-        $scope.$apply(function(){
-          $scope.volcanoesReported.push([]);
-          $scope.volcanoesReported[i].push({
-            name: xmlParse.getVolcanoName(xml, i),
-            urgency: xmlParse.getUrgency(xml, i),
-            certainty: xmlParse.getCertainty(xml, i),
-            activity: xmlParse.getActivityStatus(xml, i),
-            obervatoryPrimary: xmlParse.getPrimaryObservatory(xml, i),
-            oberrvatorySecondary: xmlParse.getSecondaryObservatory(xml, i),
-            headline: xmlParse.getHeadline(xml, i),
-            description: xmlParse.getDescription(xml, i),
-            sources: xmlParse.getSources(xml, i),
-            country: xmlParse.getLocation(xml, i)[0],
-            coors: [xmlParse.getLocation(xml, i)[1], xmlParse.getLocation(xml, i)[2]]
-          });
-        }); //Scope apply
+      for (var i=0; i < (xmlParse.getVolcanoCount(xml)); i++){
+        
+          for(var j=0; j < csv.length; j++){
+            if(csv[j]['Volcano Name'] === xmlParse.getVolcanoName(xml, i))
+            {
+              $scope.volcanoesReported.push({
+                name: xmlParse.getVolcanoName(xml, i),
+                urgency: xmlParse.getUrgency(xml, i),
+                certainty: xmlParse.getCertainty(xml, i),
+                activity: xmlParse.getActivityStatus(xml, i),
+                obervatoryPrimary: xmlParse.getPrimaryObservatory(xml, i),
+                oberrvatorySecondary: xmlParse.getSecondaryObservatory(xml, i),
+                headline: xmlParse.getHeadline(xml, i),
+                description: xmlParse.getDescription(xml, i),
+                sources: xmlParse.getSources(xml, i),
+                country: xmlParse.getLocation(xml, i)[0],
+                coors: [xmlParse.getLocation(xml, i)[1], xmlParse.getLocation(xml, i)[2]],
+                volcanoNum: csv[j]['Volcano Number'],
+                volcanoType: csv[j]['Primary Volcano Type'],
+                lastEruption: csv[j]['Last Eruption Year'],
+                elevation: csv[j].Elevation,
+                majorRockTypes: [csv[j]['Major Rock 1'], csv[j]['Major Rock 2'], csv[j]['Major Rock 3'], csv[j]['Major Rock 4'], csv[j]['Major Rock 5']],
+                minorRockTypes: [csv[j]['Minor Rock 1'], csv[j]['Minor Rock 2'], csv[j]['Minor Rock 3'], csv[j]['Minor Rock 4'], csv[j]['Minor Rock 5']],
+                populationRanges: [csv[j]['Population within 5 km'], csv[j]['Population within 10 km'], csv[j]['Population within 30 km'], csv[j]['Population within 100 km']]
+              }); 
+              break;
+            }
+          }
+          
       } //for loop
+      $scope.$apply(); //
+      console.log($scope.volcanoesReported[10].name);
       }); //d3.xml
 
-      d3.csv('./geodata/volcano_list.csv', function(d){
+      
+      //This is the mapping, we're gonna come back later and put in the loop
 
-       var quakes = d3.select('#world').append('g')
+
+       /*var quakes = d3.select('#world').append('g')
       .attr('class', 'quakes') 
       .selectAll('.quake')
       .data(d)
@@ -97,13 +114,13 @@
       .attr('r', 25)
       .style('color', 'red')          
       .style('stroke', 'red')          
-      .style('stroke-width', 1.45);
+      .style('stroke-width', 1.45);*/
 
      }); //d3.csv
 
 
-  }; //$scope.volcanoWerk
+  }; //$scope.volcanoPrep
 
-  $scope.volcanoPregame();
+  $scope.volcanoPrep();
     
   });
