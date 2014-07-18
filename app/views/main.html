@@ -1,22 +1,47 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-2 well text-center">
-      INFO, yeah
-      <p>
-        <button ng-click="plot()"> PLOT </button>
-      </p>
-      <p ng-repeat="d in volcanoesReported">
-      {{d.name}}, {{d.country}}
-      </p>
-    </div>
-    <div class="col-lg-10  well text-center">
+    <div class="col-lg-8  well text-center">
       <h1>'Allo, 'Allo! </h1>
       <p class="lead">
         <div id="map"></div>
-        <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-        Always a pleasure scaffolding your apps.
       </p>
       <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+    </div>
+    <div class="col-lg-4 well">
+      <p>
+        <button ng-click="plot()">PLOT</button>
+      </p>
+      <p>
+        <table class="table table-bordered table-condensed table-responsive">
+          <tr>
+            <td colspan="4">{{current.name}}</td>
+          </tr>
+          <tr>
+            <td colspan="4">Population Ranges</td>
+          </tr>
+          <tr>
+            <td class="success">New Activity</td>
+            <td>{{current.activity}}</td>
+            <td class="success">Urgency</td>
+            <td>{{current.urgency}}</td>
+          </tr>
+          <tr>
+            <td class="success">Country</td>
+            <td>{{current.country}}</td>
+            <td class="success">Certainty</td>
+            <td>{{current.certainty}}</td>
+          </tr>
+          <tr>
+            <td class="success">Elevation</td>
+            <td>{{current.elevation}}</td>
+            <td class="success">Type</td>
+            <td>{{current.volcanoType}}</td>
+          </tr>
+          <tr>
+            <td colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{current.description}}</td>
+          </tr>
+        </table>
+      </p>
     </div>
   </div>
   <div class="row marketing">
