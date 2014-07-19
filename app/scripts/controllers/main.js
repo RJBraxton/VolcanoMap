@@ -31,9 +31,8 @@
      var path = d3.geo.path()
      .projection( $scope.projection);
 
-/*     var graticule = d3.geo.graticule()
-     .extent([[-98 - 45, 38 - 45], [-98 + 45, 38 + 45]])
-     .step([5, 5]);*/
+     var graticule = d3.geo.graticule()
+     .step([5, 5]);
 
      var svg = d3.select('#map').append('svg')
      .attr('id','world')
@@ -41,6 +40,11 @@
      .attr('preserveAspectRatio', 'xMidyMid slice')
      .attr('width', '100%')
      .attr('height', '100%');
+
+     svg.append("path")
+      .datum(graticule.outline)
+      .attr("class", "water")
+      .attr("d", path);
 
      d3.json('./geodata/world-110m.json', function(error, world) {
       svg.insert('path', '.graticule')
@@ -102,27 +106,26 @@
 
 
     var quakes = d3.select('#world').append('g')
-    .attr('class', 'quakes')
-    .selectAll('.quake')
+    .attr('class', 'volcanoes')
+    .selectAll('.volcano')
     .data($scope.volcanoesReported)
     .enter().append('g')
-    .on('click','window.alert(5)')
-    .attr('class', 'quake')
     .attr('transform', function(d) {return 'translate(' + $scope.projection(d.coors)[0] + ',' + $scope.projection(d.coors)[1] + ')';});
 
     quakes.append('circle')
-    .attr('class','quakeStatic')
-    .attr('r', 10)
-    .style('stroke', 'red')          
+    .attr('class','volcano')
+    .attr('r', 10)     
     .style('stroke-width', 1.45)
-    .on('click', function(d){ $scope.display(d);});
+    .on('click', function(d){ $scope.display(d,d3.select(this));});
 
   }; //$scope.plot
 
-  $scope.display = function(d){
+  $scope.display = function(d,circle){
     $scope.$apply(function(){
       $scope.current = d;
     });
+    d3.select('.volcanoCurrent').classed('volcanoCurrent', false);
+    circle.classed('volcanoCurrent', true);
   };
 
   $scope.current = {

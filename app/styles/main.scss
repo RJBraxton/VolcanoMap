@@ -3,6 +3,28 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
 
+.volcanoCurrent {
+  stroke: blue;
+}
+
+.water {
+  fill:#E6E6E6;
+}
+
+.land {
+  /*fill: wheat;*/
+  fill:#fffaec;
+  stroke: #766951;
+  stroke-width: .5px;
+}
+
+.borders {
+  fill: none;
+  stroke: #a5967e;
+  stroke-width: .5px;
+  stroke-dasharray: 0.5, 0.5;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
