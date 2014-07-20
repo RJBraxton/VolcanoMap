@@ -41,10 +41,10 @@
      .attr('width', '100%')
      .attr('height', '100%');
 
-     svg.append("path")
+     svg.append('path')
       .datum(graticule.outline)
-      .attr("class", "water")
-      .attr("d", path);
+      .attr('class', 'water')
+      .attr('d', path);
 
      d3.json('./geodata/world-110m.json', function(error, world) {
       svg.insert('path', '.graticule')
