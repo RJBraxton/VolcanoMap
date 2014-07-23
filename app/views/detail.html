@@ -11,11 +11,13 @@
 					<td><strong>Region: </strong>{{info.region}}, {{info.subregion}}</td>
 				</tr>
 				<tr>
-					<td>Major Rocks</td>
+					<td><strong>Major Rocks</strong><br/>
+					<text ng-repeat="rocks in info.majorRockTypes"> -{{rocks}} <br/></text></td>
 					<td><strong>Elevation: </strong>{{info.elevation}}ft</td>
 				</tr>
 				<tr>
-					<td>Minor Rocks</td>
+					<td><strong>Minor Rocks</strong><br/>
+					<text ng-repeat="rocks in info.minorRockTypes"> -{{rocks}} <br/></text></td>
 					<td><strong>Coordinates: </strong>{{info.coors}}</td>
 				</tr>
 				<tr>
@@ -23,6 +25,29 @@
 					<td></td>
 				</tr>
 			</table>
+			<p>
+				<table class="table table-bordered">
+					<tr>
+						<td colspan="2"><strong>Population within __</strong></td>
+					</tr>
+					<tr>
+						<td><strong>5km</strong></td>
+						<td>{{info.populationRanges[0]}}</td>
+					</tr>
+					<tr>
+						<td><strong>10km</strong></td>
+						<td>{{info.populationRanges[1]}}</td>
+					</tr>
+					<tr>
+						<td><strong>30km</strong></td>
+						<td>{{info.populationRanges[2]}}</td>
+					</tr>
+					<tr>
+						<td><strong>100km</strong></td>
+						<td>{{info.populationRanges[3]}}</td>
+					</tr>
+				</table>
+			</p>
 		</div>
 		<div class='col col-lg-6 well'>
 			<div id="detailmap" ng-model="info"></div>

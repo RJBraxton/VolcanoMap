@@ -10,10 +10,10 @@
  * Controller of the volcanoMapApp
  */
  angular.module('volcanoMapApp')
- .controller('DetailCtrl', function ($rootScope, $scope, $routeParams, $http) {
+ .controller('DetailCtrl', function ($rootScope, $scope, $routeParams, $http, $filter) {
 
  	$scope.info = [];
- 	$scope.eqinfo = 'nada';
+ 	$scope.eqinfo = '';
 
  	//Generating info data and placing text
  	$scope.prep = function(){
@@ -38,10 +38,29 @@
  							volcanoType: csv[j]['Primary Volcano Type'],
  							lastEruption: csv[j]['Last Eruption Year'],
  							elevation: csv[j].Elevation,
- 							majorRockTypes: [csv[j]['Major Rock 1'], csv[j]['Major Rock 2'], csv[j]['Major Rock 3'], csv[j]['Major Rock 4'], csv[j]['Major Rock 5']],
- 							minorRockTypes: [csv[j]['Minor Rock 1'], csv[j]['Minor Rock 2'], csv[j]['Minor Rock 3'], csv[j]['Minor Rock 4'], csv[j]['Minor Rock 5']],
+ 							majorRockTypes: [],
+ 							minorRockTypes: [],
  							populationRanges: [csv[j]['Population within 5 km'], csv[j]['Population within 10 km'], csv[j]['Population within 30 km'], csv[j]['Population within 100 km']]
  						};
+
+ 						//Here we work some regex magic because the .csv file is returning odd question-mark strings if there's no rock type listed.
+ 						var regex = /^[A-Z]/;
+ 						for(var i =1; i<6; i++){
+ 							if(regex.test(csv[j]['Major Rock ' + i])){
+ 								$scope.info.majorRockTypes.push(csv[j]['Major Rock ' + i]);
+ 							}
+ 							else {
+ 								break;
+ 							}
+ 						}
+ 						for(var i =1; i<6; i++){
+ 							if(regex.test(csv[j]['Minor Rock ' + i])){
+ 								$scope.info.minorRockTypes.push(csv[j]['Minor Rock ' + i]);
+ 							}
+ 							else {
+ 								break;
+ 							}
+ 						}
 
  						var width = 960,
  						height = 600;
@@ -83,36 +102,47 @@
  							.attr('class', 'borders')
  							.attr('d', path);
 
- 							svg.append('g')
- 							.attr('transform', function() {return 'translate(' + $scope.projection([$scope.info.lon, $scope.info.lat])[0] + ',' + $scope.projection([$scope.info.lon, $scope.info.lat])[1] + ')';})
- 							.append('circle')
- 							.attr('class','volcano')
- 							.attr('r', 10)     
- 							.style('stroke-width', 1.45);
 
- 							$http.get('http://www.corsproxy.com/comcat.cr.usgs.gov/fdsnws/event/1/query?starttime=' + moment().subtract('days', 7).format('YYYY-MM-DD') + '&latitude=' + $scope.info.lat + '&longitude=' + $scope.info.lon + '&maxradiuskm=1500&minmagnitude=0&format=geojson&endtime=' + moment().format('YYYY-MM-DD') + '&orderby=time')
+ 							$http.get('http://www.corsproxy.com/comcat.cr.usgs.gov/fdsnws/event/1/query?starttime=' + moment().subtract('days', 14).format('YYYY-MM-DD') + '&latitude=' + $scope.info.lat + '&longitude=' + $scope.info.lon + '&maxradiuskm=1500&minmagnitude=4&format=geojson&endtime=' + moment().format('YYYY-MM-DD') + '&orderby=time')
  							.success(function(data){
  								d3.json(data, function(){
- 									console.log([data.features[0].geometry.coordinates[0], data.features[0].geometry.coordinates[1]]);
- 									for(var i=0; i < data.features.length; i++){
- 										svg.selectAll('.eq')
- 										.data(data.features)
- 										.enter().append('g')
- 										.attr('transform', function(d) {return 'translate(' + $scope.projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0] + ',' + $scope.projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1] + ')';})
+ 									if(data.features.length > 0){
+ 										for(var i=0; i < data.features.length; i++){
+ 											svg.selectAll('.eq')
+ 											.data(data.features)
+ 											.enter().append('g')
+ 											.attr('transform', function(d) {return 'translate(' + $scope.projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0] + ',' + $scope.projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1] + ')';})
+ 											.append('circle')
+ 											.attr('class', 'earthquake')
+ 											.on('mouseover', function(d){
+ 												$scope.$apply(function(){ 
+ 													$scope.eqinfo = 'M' + d.properties.mag + ' earthquake, ' + moment(d.properties.time).fromNow() + ', ' + d.properties.place;
+ 												});
+ 											})
+ 											.attr('r', 10)     
+ 											.style('stroke-width', 1.45);
+
+ 											svg.append('g')
+ 											.attr('transform', function() {return 'translate(' + $scope.projection([$scope.info.lon, $scope.info.lat])[0] + ',' + $scope.projection([$scope.info.lon, $scope.info.lat])[1] + ')';})
+ 											.append('circle')
+ 											.attr('class','volcano')
+ 											.attr('r', 10)     
+ 											.style('stroke-width', 1.45);
+ 										}
+ 									}
+ 									else {
+ 										svg.append('g')
+ 										.attr('transform', function() {return 'translate(' + $scope.projection([$scope.info.lon, $scope.info.lat])[0] + ',' + $scope.projection([$scope.info.lon, $scope.info.lat])[1] + ')';})
  										.append('circle')
- 										.attr('class', 'earthquake')
- 										.on('mouseover', function(d){ $scope.$apply(function(){ $scope.eqinfo = d.properties.mag;});})
+ 										.attr('class','volcano')
  										.attr('r', 10)     
  										.style('stroke-width', 1.45);
  									}
  								});
- 							});
+});
       }); //d3.json
-
- 						
-
- 						$rootScope.name = 'Detail - ' + csv[j]['Volcano Name'] + ', ' + csv[j].Country;
- 						break;
+$rootScope.name = 'Detail - ' + csv[j]['Volcano Name'] + ', ' + csv[j].Country;
+break;
             } //if loop
           } //for loop j
       }); //$scope apply
