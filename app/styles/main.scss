@@ -3,6 +3,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
 
+h1, h2, h3, h4, h5 {
+  display: inline;
+}
+
+.earthquake {
+  stroke: yellow;
+}
+
+.volcano {
+  stroke: red;
+}
+
 .volcanoCurrent {
   stroke: blue;
 }

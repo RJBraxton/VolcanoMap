@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<alert xmlns="urn:oasis:names:tc:emergency:cap:1.1">
+<identifier>GVP-Weekly-20140702</identifier>
+<sender>gvp@si.edu</sender>
+<sent>2014-07-02T02:01:28-04:00</sent>
+<status>Actual</status>
+<msgType>Alert</msgType>
+<source>Global Volcanism Program (Smithsonian Institution) and Volcano Hazards Program (US Geological Survey)</source>
+<scope>Public</scope>
+
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Cleveland</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>Yes</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Alaska Volcano Observatory</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.avo.alaska.edu/</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value>USGS Volcano Hazards Program</value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value>http://volcanoes.usgs.gov/</value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Cleveland (United States), 25 June-1 July 2014</headline>
+	<description>AVO reported earlier in June that an explosion from Cleveland on the evening of 5 June was detected on the Dillingham acoutstic infrasound array and at seismic stations at Korovin volcano. The brief event was similar to previous explosions at Cleveland, and generated a small detached plume with a weak ash signal observed in satellite imagery. The cloud was at an altitude of about 7.6 km (25,000 ft) a.s.l., had moved about 140 km SW, and rapidly dissipated. The last previous explosion at was 6 March, seen by residents of Nikolski who reported small ash puffs.</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: US Geological Survey Alaska Volcano Observatory (AVO)</contact>
+	<area><areaDesc>United States</areaDesc><circle>52.825,-169.944 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Kusatsu-Shiranesan</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>Yes</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Japan Meteorological Agency</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.jma.go.jp/en/volcano/</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value>Geological Survey of Japan</value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value>http://www.aist.go.jp/RIODB/strata/VOL_JP/EN/index.htm</value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Kusatsu-Shiranesan (Japan), 25 June-1 July 2014</headline>
+	<description>JMA reported that deformation of Kusatsu-Shiranesan’s crater and the elevated temperatures which began earlier in March, continued during 25-30 June. This activity has been focused in the area immediately of N of Mizugama crater. Some seismicity was also reported, although tremor was absent. The Alert Level remains at 2 (on a scale of 1-5).</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Japan Meteorological Agency (JMA) </contact>
+	<area><areaDesc>Japan</areaDesc><circle>36.618,138.528 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Nyamuragira</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>Yes</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value></value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value></value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value></value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value></value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Nyamuragira (DR Congo), 25 June-1 July 2014</headline>
+	<description>On 29 June NASA reported that Nyamuragira vented steam and other volcanic gases and there was a glow from the lava lake.  NOAA reported that an Ozone Monitoring Instrument (OMI) satellite detected high SO2 concentrations above Nyamuragira. The University of Hawaii reported that Moderate Resolution Imaging Spectroradiometer (MODIS) satellite data detected thermal anomalies and issued six MODVOLC alerts for the volcano’s N side.</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Sources: NASA Earth Observatory ,NOAA Satellite and Information Service,University of Hawaii MODIS</contact>
+	<area><areaDesc>DR Congo</areaDesc><circle>-1.408,29.200 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Sinabung</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>Yes</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Centre of Volcanology and Geological Hazard Mitigation</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://portal.vsi.esdm.go.id/joomla/</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value></value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value></value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Sinabung (Indonesia), 25 June-1 July 2014</headline>
+	<description>After more than a month of dome growth and lava flows, PVMBG reported that Sinabung erupted explosively again on 29 June. The eruption plume rose to 4 km (13,000 ft) a.s.l. and pyroclastic flows extended 4.5 km SE. Visual observations were impeded by inclement weather. About 14,000 persons remain evacuated since September 2013. The Alert Level remains at 3 (on a scale of 1-4). </description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Sources: Pusat Vulkanologi dan Mitigasi Bencana Geologi (PVMBG, also known as CVGHM),Xinhua</contact>
+	<area><areaDesc>Indonesia</areaDesc><circle>3.170,98.392 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Stromboli</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>Yes</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>INGV Catania Section</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.ct.ingv.it/</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value>Istituto Nazionale di Geofisica e Vulcanologia</value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value>http://www.ingv.it/</value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Stromboli (Italy), 25 June-1 July 2014</headline>
+	<description>INGV reported that during 29-30 June Stromboli erupted a small intracrater lava flow, a lava flow from the crater mouth on the N, and a lava flow on the Sciara del Fuoco on the S. The flows were accompanied by intense spattering and a high frequency of explosions on 29 June.</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Sezione di Catania - Osservatorio Etneo (INGV)</contact>
+	<area><areaDesc>Italy</areaDesc><circle>38.789,15.213 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Zhupanovsky</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>Yes</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Kamchatka Volcanic Eruption Response Team</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.kscnet.ru/ivs/kvert/index_eng.php</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value>Institute of Volcanology and Seismology</value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value>http://www.kscnet.ru/ivs/volcanoes/holocene/index.htm</value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Zhupanovsky (Russia), 25 June-1 July 2014</headline>
+	<description>KVERT reported that during 20-26 June, moderate gas-and-steam activity was observed at Zhupanovsky. Satellite data showed ash plumes drifting 55 km NW from the volcano. During June 27-28 cloud cover prevented views from satellite. The Aviation Color Code is Orange. </description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Kamchatkan Volcanic Eruption Response Team (KVERT)</contact>
+	<area><areaDesc>Russia</areaDesc><circle>53.590,159.147 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Aira</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Sakurajima Volcano Observatory</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.dpri.kyoto-u.ac.jp/~kazan/default_e.html</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value>Geological Survey of Japan</value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value>http://www.aist.go.jp/RIODB/strata/VOL_JP/EN/index.htm</value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Aira (Japan), 25 June-1 July 2014</headline>
+	<description>JMA reported that during 23-27 June six explosions from Showa Crater at Aira Caldera’s Sakurajima volcano ejected tephra as far as 1,300 m. During 27-30 June there were four explosions. A significant explosion on 29 June lasted for 17 minutes.The Tokyo VAAC reported that during 25 June-1 July plumes rose to altitudes of 1.2-3.9 km (4,000-13,000 ft) a.s.l. and  drifted NW, SE, and E. The Alert Level remained at 3 (on a scale of 1-5).</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Sources: Japan Meteorological Agency (JMA) ,Tokyo Volcanic Ash Advisory Center (VAAC) </contact>
+	<area><areaDesc>Japan</areaDesc><circle>31.593,130.657 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Bezymianny</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Kamchatka Volcanic Eruption Response Team</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.kscnet.ru/ivs/kvert/index_eng.php</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value>Institute of Volcanology and Seismology</value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value>http://www.kscnet.ru/ivs/volcanoes/holocene/index.htm</value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Bezymianny (Russia), 25 June-1 July 2014</headline>
+	<description>KVERT reported that Bezymianny’s activity continued during25-29 June; shallow earthquakes were registered. Video data captured weak gas-and-steam plumes rising from the volcano. Satellite data showed the volcano was frequently obscured by clouds. The Aviation Color Code remained at Orange.</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Kamchatkan Volcanic Eruption Response Team (KVERT)</contact>
+	<area><areaDesc>Russia</areaDesc><circle>55.978,160.587 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Dukono</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Centre of Volcanology and Geological Hazard Mitigation</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://portal.vsi.esdm.go.id/joomla/</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value></value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value></value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Dukono (Indonesia), 25 June-1 July 2014</headline>
+	<description>Based on analyses of satellite imagery and wind data, the Darwin VAAC reported that on 27-28 June ash plumes from Dukono rose to an altitude of 2.1 km (7,000 ft) a.s.l. and drifted 45-75 km NE and E. </description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Darwin Volcanic Ash Advisory Centre (VAAC)</contact>
+	<area><areaDesc>Indonesia</areaDesc><circle>1.680,127.880 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Fuego</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>INSIVUMEH, Guatemala</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.insivumeh.gob.gt/geofisica/programa.htm</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value></value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value></value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Fuego (Guatemala), 25 June-1 July 2014</headline>
+	<description>INSIVUMEH reported that on 25-29 June weak to moderate explosions generated ash plumes that rose 500-800 m above the crater and drifted 10-12 km W, NW, and SE. Incandescent material that was ejected 100-200 m above the crater landed on the flank and formed avalanches. A lava flow from the crater moving SW towards the Tanilaya drainage generated avalanches into the Ceniza drainage (SSW). On 26 June explosions generated moderate and strong acoustic waves that sounded like a quiet jet engine for a period of 1-2 minutes.</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Instituto Nacional de Sismologia, Vulcanologia, Meteorologia, e Hidrologia (INSIVUMEH)</contact>
+	<area><areaDesc>Guatemala</areaDesc><circle>14.473,-90.880 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Karymsky</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Kamchatka Volcanic Eruption Response Team</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.kscnet.ru/ivs/kvert/index_eng.php</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value>Institute of Volcanology and Seismology</value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value>http://www.kscnet.ru/ivs/volcanoes/holocene/index.htm</value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Karymsky (Russia), 25 June-1 July 2014</headline>
+	<description>KVERT reported that Strombolian and weak Vulcanian activity continued at Karymsky during 20-26 June. Satellite images detected no activity or were obscured by clouds. The Aviation Color Code remained at Orange.</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Kamchatkan Volcanic Eruption Response Team (KVERT)</contact>
+	<area><areaDesc>Russia</areaDesc><circle>54.050,159.450 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Kilauea</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Hawaiian Volcano Observatory</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://hvo.wr.usgs.gov/</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value>USGS Volcano Hazards Program</value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value>http://volcanoes.usgs.gov/</value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Kilauea (United States), 25 June-1 July 2014</headline>
+	<description>During 25 June-1 July HVO reported that the circulating lava lake occasionally rose and fell in the deep pit within Kilauea's Halema'uma'u Crater. Gas emissions remained elevated. The plume from the vent continued to deposit variable amounts of ash, spatter, and Pele's hair onto nearby areas; smaller particles may have been dropped several kilometers away.  During 25-26 June, lava flows from the N and NE spatter cones at Pu'u 'O'o Crater were active and persistent glow emanated from spatter cones on the N, SE, and S portions of the crater floor, and from a small lava lake in the NE spatter cone. On 27 June the crater floor slowly subsided and new lava erupted on the N flank. During 27-30 June lava flowed from four locations on the NE flank, advancing to about 1 km NE. Spatter cones collapsed varying amounts. A 28 June satellite image showed that the 27 June lava flows had expanded in area and extended no more than 1.6 km NE of Pu'u 'O'o cone. During 25-27 June there were multiple active breakouts in the interior of the Kahauale`a 2 flow at the north base of Pu'u 'O'o and distant broad smoke plumes, with multiple glowing points visible at night from both near and distant breakouts. Only one stationary glowing spot was seen during 28-30 June on a nearby breakout from the Kahauale`a 2 flow, and little to no smoke from the distal end of that flow, suggesting that the flow was cutoff and dead.
+</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: US Geological Survey Hawaiian Volcano Observatory (HVO) </contact>
+	<area><areaDesc>United States</areaDesc><circle>19.421,-155.287 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Pacaya</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>INSIVUMEH, Guatemala</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.insivumeh.gob.gt/geofisica/programa.htm</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value></value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value></value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Pacaya (Guatemala), 25 June-1 July 2014</headline>
+	<description>INSIVUMEH reported that on most days during 25-29 June an ash plume rose 50 m above Pacaya and drifted 400-500 m N and S. </description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Instituto Nacional de Sismologia, Vulcanologia, Meteorologia, e Hidrologia (INSIVUMEH)</contact>
+	<area><areaDesc>Guatemala</areaDesc><circle>14.381,-90.601 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>San Miguel</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Servicio Nacional de Estudios Territoriales</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.snet.gob.sv/</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value></value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value></value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for San Miguel (El Salvador), 25 June-1 July 2014</headline>
+	<description>MARN issued a special report on 27 June and related the unstable system at San Miguel as RSAM values decreased then climbed to fluctuate between 118 and 335.  Concentrations of sulfur dioxide (SO2) values measured over the past 24 hours have fluctuated between good and unhealthy.</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Servicio Nacional de Estudios Territoriales (SNET) </contact>
+	<area><areaDesc>El Salvador</areaDesc><circle>13.434,-88.269 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Santa María</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>INSIVUMEH, Guatemala</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.insivumeh.gob.gt/geofisica/programa.htm</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value></value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value></value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Santa María (Guatemala), 25 June-1 July 2014</headline>
+	<description>INSIVUMEH reported that during 25-29 June Santa María's Santiaguito lava-dome complex generated ash plumes that rose 200-300 m and drifted 2-3 km SW. A few avalanches were reported moving down the SW flank toward the San Isidro river canyon and from the lava flow E toward the Nima I river. Ashfall was reported in Monte Claro (S).</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Instituto Nacional de Sismologia, Vulcanologia, Meteorologia, e Hidrologia (INSIVUMEH)</contact>
+	<area><areaDesc>Guatemala</areaDesc><circle>14.756,-91.552 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Shishaldin</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Alaska Volcano Observatory</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.avo.alaska.edu/</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value>USGS Volcano Hazards Program</value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value>http://volcanoes.usgs.gov/</value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Shishaldin (United States), 25 June-1 July 2014</headline>
+	<description>AVO reported that during 25 June – 1 July, low-level seismicity continued at Shishaldin volcano. Elevated surface temperatures at the summit were detected. A steam and gas plume was intermittently visible rising from the summit and drifting downwind, although satellite and web-camera images have been mostly cloudy. The Aviation Color Code remained at Orange and the Volcano Alert Level remained at Watch.</description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: US Geological Survey Alaska Volcano Observatory (AVO)</contact>
+	<area><areaDesc>United States</areaDesc><circle>54.756,-163.970 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Shiveluch</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Kamchatka Volcanic Eruption Response Team</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.kscnet.ru/ivs/kvert/index_eng.php</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value>Institute of Volcanology and Seismology</value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value>http://www.kscnet.ru/ivs/volcanoes/holocene/index.htm</value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Shiveluch (Russia), 25 June-1 July 2014</headline>
+	<description>KVERT reported that during 20-27 June lava-dome extrusion onto Shiveluch’s SE flank was accompanied by ash explosions, incandescence, hot avalanches, and fumarolic activity. Satellite images detected a thermal anomaly over the dome on 22 and 25 June. The Aviation Color Code remained at Orange. </description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Source: Kamchatkan Volcanic Eruption Response Team (KVERT)</contact>
+	<area><areaDesc>Russia</areaDesc><circle>56.653,161.360 0</circle></area>
+</info>
+
+<info>
+	<category>Geo</category>
+	<event>Volcano</event>
+	<responseType>None</responseType>
+	<urgency>Unknown</urgency>
+	<severity>Unknown</severity>
+	<certainty>Observed</certainty>
+	<eventCode><valueName>Volcano Name</valueName><value>Ubinas</value></eventCode>
+	<eventCode><valueName>New Activity</valueName><value>No</value></eventCode>
+	<eventCode><valueName>Observatory Name (primary)</valueName><value>Instituto Geofisico del Perú</value></eventCode>
+	<eventCode><valueName>Observatory Link (primary)</valueName><value>http://www.igp.gob.pe/</value></eventCode>
+	<eventCode><valueName>Observatory Name (secondary)</valueName><value></value></eventCode>
+	<eventCode><valueName>Observatory Link (secondary)</valueName><value></value></eventCode>
+	<senderName>Global Volcanism Program (Smithsonian Institution)</senderName>
+	<headline>Volcanic activity report for Ubinas (Peru), 25 June-1 July 2014</headline>
+	<description>The Buenos Aires VAAC reported that during 25-28 June there was continuous steam and possible ash emission from Ubinas. In a press release from 30 June, IGP noted minimal releases of ash and gas emissions had been observed during the previous days. Gas-and-ash plumes observed on 30 June rose 1.8 km above the crater. Minor ashfall was reported SE. </description>
+	<web>http://www.volcano.si.edu/weekly_report.cfm</web>
+	<contact>Sources: Buenos Aires Volcanic Ash Advisory Center (VAAC) ,Instituto Geofísico del Perú (IGP)</contact>
+	<area><areaDesc>Peru</areaDesc><circle>-16.355,-70.903 0</circle></area>
+</info>
+</alert>

@@ -14,6 +14,9 @@
       <p>
         <table class="table table-bordered table-condensed table-responsive">
           <tr>
+            <td colspan="4"><a class="btn btn-lg btn-success"  ng-disabled="current.active" ng-href="#/detail/{{current.volcanoNum}}">View Volcano Details</a></td>
+          </tr>
+          <tr>
             <td colspan="4">{{current.name}}</td>
           </tr>
           <tr>
@@ -33,7 +36,7 @@
           </tr>
           <tr>
             <td class="success">Elevation</td>
-            <td>{{current.elevation}}</td>
+            <td>{{current.elevation}}ft</td>
             <td class="success">Type</td>
             <td>{{current.volcanoType}}</td>
           </tr>

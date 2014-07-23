@@ -1,13 +1,32 @@
 <div class="container-fluid">
 	<row>
-	<div class='col col-lg-6 well'>
-			<p>
-				<h2>{{info.name}}</h2>
-			</p>
-			<p>{{info}}</p>
+		<div class='col col-lg-6 well'>
+			<table class="table table-bordered">
+				<tr>
+					<td><strong>Type: </strong>{{info.volcanoType}}</td>
+					<td><strong>Country: </strong>{{info.country}}</td>
+				</tr>
+				<tr>
+					<td><strong>Last Eruption: </strong>{{info.lastEruption}}</td>
+					<td><strong>Region: </strong>{{info.region}}, {{info.subregion}}</td>
+				</tr>
+				<tr>
+					<td>Major Rocks</td>
+					<td><strong>Elevation: </strong>{{info.elevation}}ft</td>
+				</tr>
+				<tr>
+					<td>Minor Rocks</td>
+					<td><strong>Coordinates: </strong>{{info.coors}}</td>
+				</tr>
+				<tr>
+					<td><strong>Tectonic Setting: </strong>{{info.tectonic}}</td>
+					<td></td>
+				</tr>
+			</table>
 		</div>
 		<div class='col col-lg-6 well'>
-			<p>Maybe put like, a Google Maps or D3 map plugin here with the location of the volcano and the recent earthquakes near it?</p>
+			<div id="detailmap" ng-model="info"></div>
+			<p>{{eqinfo}}</p>
 		</div>
 	</row>
 </div>

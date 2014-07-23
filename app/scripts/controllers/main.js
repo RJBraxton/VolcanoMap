@@ -9,13 +9,14 @@
  * Controller of the volcanoMapApp
  */
  angular.module('volcanoMapApp')
- .controller('MainCtrl', function ($scope, xmlParse) {
+ .controller('MainCtrl', function ($rootScope, $scope, xmlParse) {
  	$scope.awesomeThings = [
  	'HTML5 Boilerplate',
  	'AngularJS',
  	'Karma'
  	];
 
+  $rootScope.name = 'Home';
 
  	$scope.map = function(){
 
@@ -46,7 +47,7 @@
       .attr('class', 'water')
       .attr('d', path);
 
-     d3.json('./geodata/world-110m.json', function(error, world) {
+     d3.json('./world-110m.json', function(error, world) {
       svg.insert('path', '.graticule')
       .datum(topojson.feature(world, world.objects.land))
       .attr('class', 'land')
@@ -60,8 +61,8 @@
 
     $scope.volcanoPrep = function(){
       $scope.volcanoesReported = [];
-      d3.csv('./geodata/volcano_list.csv', function(csv){
-        d3.xml('./geodata/WeeklyVolcanoCAP.xml', function(xml){
+      d3.csv('./volcano_list.csv', function(csv){
+        d3.xml('http://www.corsproxy.com/volcano.si.edu/news/WeeklyVolcanoCAP.xml', function(xml){
           for (var i=0; i < (xmlParse.getVolcanoCount(xml)); i++){
 
             for(var j=0; j < csv.length; j++){
@@ -123,6 +124,7 @@
   $scope.display = function(d,circle){
     $scope.$apply(function(){
       $scope.current = d;
+      $scope.current.active = false;
     });
     d3.select('.volcanoCurrent').classed('volcanoCurrent', false);
     circle.classed('volcanoCurrent', true);
@@ -146,7 +148,8 @@
     elevation: '-',
     majorRockTypes: '-',
     minorRockTypes: '-',
-    populationRanges: '-'
+    populationRanges: '-',
+    active: true
   };
 
 
