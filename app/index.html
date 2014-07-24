@@ -21,23 +21,25 @@
 
     <!-- Add your site or application content here -->
     <div class="container-fluid">
-      <div class="header">
+      <div class="header navbar navbar-fixed-top">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a ng-href="#">Home</a></li>
           <li><a ng-href="#/about">About</a></li>
           <li><a ng-href="#">Contact</a></li>
         </ul>
-        <h2 class="text-muted">VolcanoMap - </h2> <h4 class="text-muted">{{name}}</h4>
+        <h2 class="text-muted title">VolcanoMap - </h2> <h4 class="text-muted">{{name}}</h4>
       </div>
       <div class="row">
       <div ng-view=""></div>
       </div>
+  
 
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-stats"></span> from the Yeoman team</p>
-      </div>
+      
     </div>
-
+<div class="footer navbar navbar-fixed-bottom">
+  <p>&copy Richard Braxton 2014</p>
+  <p>Background image: <a href="http://en.wikipedia.org/wiki/Volcano#mediaviewer/File:Santa_Ana_Volcano.USAF.C-130.3.jpg">Santa Ana Volcano.USAF.C-130.3, José Fernández, U.S Air Force</a></p>
+      </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>

@@ -3,6 +3,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/font
 @import "bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 // endbower
 
+
+.title {
+  padding-left: 4px;
+}
+
+.header {
+  background: #F5F5F5;
+  padding-top: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
 h1, h2, h3, h4, h5 {
   display: inline;
 }
@@ -46,8 +58,16 @@ h1, h2, h3, h4, h5 {
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 70px;
+  //padding-bottom: 20px;
+  @media (min-width: 800px) {
+    background-image: url("../images/bg.jpg");
+  };
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -76,6 +96,13 @@ body {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  position: relative;
+  clear:both;
+}
+
+.footer p {
+  margin-bottom: 5px;
+  padding-left: 10px
 }
 
 .container-narrow > hr {
@@ -108,10 +135,14 @@ body {
     max-width: 730px;
   }
 
+
+
   /* Remove the padding we set earlier */
   .header,
   .marketing,
   .footer {
+    max-width: 100%;
+    background: #F5F5F5;
     padding-left: 0;
     padding-right: 0;
   }
