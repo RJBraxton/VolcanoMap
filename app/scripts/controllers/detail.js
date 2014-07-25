@@ -10,7 +10,7 @@
  * Controller of the volcanoMapApp
  */
  angular.module('volcanoMapApp')
- .controller('DetailCtrl', function ($rootScope, $scope, $routeParams, $http, $filter) {
+ .controller('DetailCtrl', function ($rootScope, $scope, $routeParams, $http) {
 
  	$scope.info = [];
  	$scope.eqinfo = '';
@@ -40,7 +40,7 @@
  							elevation: csv[j].Elevation,
  							majorRockTypes: [],
  							minorRockTypes: [],
- 							populationRanges: [csv[j]['Population within 5 km'], csv[j]['Population within 10 km'], csv[j]['Population within 30 km'], csv[j]['Population within 100 km']]
+ 							populationRanges: [csv[j]['Population within 5 km'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','), csv[j]['Population within 10 km'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','), csv[j]['Population within 30 km'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','), csv[j]['Population within 100 km'].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')]
  						};
 
  						//Here we work some regex magic because the .csv file is returning odd question-mark strings if there's no rock type listed.
@@ -53,9 +53,9 @@
  								break;
  							}
  						}
- 						for(var i =1; i<6; i++){
- 							if(regex.test(csv[j]['Minor Rock ' + i])){
- 								$scope.info.minorRockTypes.push(csv[j]['Minor Rock ' + i]);
+ 						for(var w =1; w<6; w++){
+ 							if(regex.test(csv[j]['Minor Rock ' + w])){
+ 								$scope.info.minorRockTypes.push(csv[j]['Minor Rock ' + w]);
  							}
  							else {
  								break;
@@ -105,6 +105,7 @@
 
  							$http.get('http://www.corsproxy.com/comcat.cr.usgs.gov/fdsnws/event/1/query?starttime=' + moment().subtract('days', 14).format('YYYY-MM-DD') + '&latitude=' + $scope.info.lat + '&longitude=' + $scope.info.lon + '&maxradiuskm=1500&minmagnitude=4&format=geojson&endtime=' + moment().format('YYYY-MM-DD') + '&orderby=time')
  							.success(function(data){
+ 								$scope.quakeLog = data.features;
  								d3.json(data, function(){
  									if(data.features.length > 0){
  										for(var i=0; i < data.features.length; i++){
@@ -112,7 +113,10 @@
  											.data(data.features)
  											.enter().append('g')
  											.attr('transform', function(d) {return 'translate(' + $scope.projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[0] + ',' + $scope.projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])[1] + ')';})
- 											.append('circle')
+ 											.append('text')
+ 											.attr('font-family', 'FontAwesome')
+ 											.attr('font-size', 25)
+ 											.text(function() { return '\uf071'; })
  											.attr('class', 'earthquake')
  											.on('mouseover', function(d){
  												$scope.$apply(function(){ 
@@ -124,7 +128,10 @@
 
  											svg.append('g')
  											.attr('transform', function() {return 'translate(' + $scope.projection([$scope.info.lon, $scope.info.lat])[0] + ',' + $scope.projection([$scope.info.lon, $scope.info.lat])[1] + ')';})
- 											.append('circle')
+ 											.append('text')
+ 											.attr('font-family', 'FontAwesome')
+ 											.attr('font-size', 25)
+ 											.text(function() { return '\uf024'; })
  											.attr('class','volcano')
  											.attr('r', 10)     
  											.style('stroke-width', 1.45);
@@ -133,7 +140,10 @@
  									else {
  										svg.append('g')
  										.attr('transform', function() {return 'translate(' + $scope.projection([$scope.info.lon, $scope.info.lat])[0] + ',' + $scope.projection([$scope.info.lon, $scope.info.lat])[1] + ')';})
- 										.append('circle')
+ 										.append('text')
+ 										.attr('font-family', 'FontAwesome')
+ 										.attr('font-size', 25)
+ 										.text(function() { return '\uf024'; })
  										.attr('class','volcano')
  										.attr('r', 10)     
  										.style('stroke-width', 1.45);
@@ -147,6 +157,10 @@ break;
           } //for loop j
       }); //$scope apply
 }); //csv
+};
+
+$scope.timePrep = function(input) {
+	return moment(input).fromNow();
 };
 
 $scope.prep();

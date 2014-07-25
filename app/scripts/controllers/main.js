@@ -43,7 +43,7 @@
                   volcanoNum: csv[j]['Volcano Number'],
                   volcanoType: csv[j]['Primary Volcano Type'],
                   lastEruption: csv[j]['Last Eruption Year'],
-                  elevation: csv[j].Elevation,
+                  elevation: csv[j].  Elevation.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','),
                   majorRockTypes: [csv[j]['Major Rock 1'], csv[j]['Major Rock 2'], csv[j]['Major Rock 3'], csv[j]['Major Rock 4'], csv[j]['Major Rock 5']],
                   minorRockTypes: [csv[j]['Minor Rock 1'], csv[j]['Minor Rock 2'], csv[j]['Minor Rock 3'], csv[j]['Minor Rock 4'], csv[j]['Minor Rock 5']],
                   populationRanges: [csv[j]['Population within 5 km'], csv[j]['Population within 10 km'], csv[j]['Population within 30 km'], csv[j]['Population within 100 km']]
@@ -74,7 +74,10 @@
     .enter().append('g')
     .attr('transform', function(d) {return 'translate(' + $scope.projection(d.coors)[0] + ',' + $scope.projection(d.coors)[1] + ')';});
 
-    quakes.append('circle')
+    quakes.append('text')
+    .attr('font-family', 'FontAwesome')
+    .attr('font-size', 25)
+    .text(function() { return '\uf024'; })
     .attr('class','volcano')
     .attr('r', 10)     
     .style('stroke-width', 1.45)
@@ -134,7 +137,7 @@
       .attr('dx', '50%')
       .attr('dy', '50%')
       .attr('text-anchor', 'middle')
-      .text("Click to load volcano data");
+      .text('Click to load volcano data');
       }); //d3.json
 
 
